@@ -17,6 +17,7 @@ public class matrix_operations {
         int [][] sumMatrix = new int[rows][column];
         int [][] subMatrix = new int[rows][column];
         int [][] multiMatrix = new int[rows][column];
+        int [][] transpose = new int[rows][column];
 
         // Addition of matrix
         for(int i =0; i<rows; i++){
@@ -25,7 +26,16 @@ public class matrix_operations {
                 subMatrix[i][j] = matrixA[i][j]-matrixB[i][j];
             }
         }
-        // Correct Matrix Multiplication
+
+        // transpose of matrix
+        for(int i =0; i<rows; i++){
+            for(int j = 0; j<column;j++){
+                transpose[j][i] = matrixA[i][j];
+                
+            }
+        }
+        
+        //Matrix Multiplication
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < column; j++) {
                 multiMatrix[i][j] = 0;
@@ -44,13 +54,22 @@ public class matrix_operations {
             System.out.println();
         }
        
-        System.out.println("Matrix Subtration:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < column; j++) {
-                System.out.print(subMatrix[i][j] + " ");
+        // System.out.println("Matrix Subtration:");
+        // for (int i = 0; i < rows; i++) {
+        //     for (int j = 0; j < column; j++) {
+        //         System.out.print(subMatrix[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+
+        System.out.println("Transpose of Matrix A:");
+        for (int i = 0; i < column; i++) {
+            for (int j = 0; j < rows; j++) {
+                System.out.print(transpose[i][j] + " ");
             }
             System.out.println();
         }
+
 
         System.out.println("Matrix Multiplication:");
         for (int i = 0; i < rows; i++) {
