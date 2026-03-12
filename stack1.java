@@ -12,7 +12,7 @@ public class stack1 {
     
         while(true){
 
-            System.out.print("\nEnter operations to perform:\nEnter 1 to PUSH new value.\nEnter 2 to POP a value.\nEnter 3 to DISPLAY the Stack.\nEnter 4 to exit.\nChoice: ");
+            System.out.print("\nSelect operations to perform:\nEnter 1 to PUSH new value.\nEnter 2 to POP a value.\nEnter 3 to DISPLAY the Stack.\nEnter 4 to exit.\nChoice: ");
             int choice = sc.nextInt();
             switch(choice){
                 case 1:
